@@ -1,0 +1,41 @@
+# pipeline for dotnet-core-helloWorld app.
+
+groups:
+- name: dotnet-resource-test-library
+  jobs:
+  - build-service
+
+resource_types:
+- name: dotnet
+  type: docker-image
+  source:
+    repository: 192.168.2.20:5000/dotnet-resource
+    tag: "latest"
+    insecure_registries: [ "192.168.2.20:5000" ]
+
+resources:
+- name: library-repo
+  type: git
+  source:
+    uri: https://github.com/miclip/dotnet-resource-test-library.git
+    branch: master    
+
+- name: dotnet-build
+  type: dotnet 
+  source:
+    framework: netcoreapp1.0
+    runtime: ubuntu.14.04-x64
+  
+jobs:
+- name: build-service
+  public: true
+  serial: true
+  plan:
+  - get: library-repo
+    trigger: true
+  - put: dotnet-build    
+    params:
+     project: library-repo/DotnetResource.sln
+     
+    
+  
