@@ -23,7 +23,7 @@ resources:
 - name: dotnet-build
   type: dotnet 
   source:
-    framework: netcoreapp1.0
+    framework: netcoreapp2.1
     runtime: ubuntu.14.04-x64
   
 jobs:
