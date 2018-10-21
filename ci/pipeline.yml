@@ -36,6 +36,7 @@ jobs:
   - put: dotnet-build    
     params:
      project: library-repo/DotnetResource.sln
+     testfilter: "*.Tests.csproj"
      
     
   
