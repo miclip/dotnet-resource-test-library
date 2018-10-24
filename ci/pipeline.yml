@@ -9,9 +9,9 @@ resource_types:
 - name: dotnet
   type: docker-image
   source:
-    repository: 192.168.2.20:5000/dotnet-resource
+    repository: 172.20.11.149:5000/dotnet-resource
     tag: "latest"
-    insecure_registries: [ "192.168.2.20:5000" ]
+    insecure_registries: [ "172.20.11.149:5000" ]
 
 resources:
 - name: library-repo
@@ -25,6 +25,8 @@ resources:
   source:
     framework: netcoreapp2.1
     runtime: ubuntu.14.04-x64
+    nuget_source: https://www.myget.org/F/dotnet-resource-test/api/v3/index.json
+    nuget_apikey: 
   
 jobs:
 - name: build-service
@@ -37,6 +39,7 @@ jobs:
     params:
      project: library-repo/DotnetResource.sln
      testfilter: "*.Tests.csproj"
+     version: "1.0.*"
      
     
   

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\DotnetResource.TestLibrary\DotnetResource.TestLibrary.csproj" />
+    <ProjectReference Include="..\..\src\DotnetResource.TestLibraryOne\DotnetResource.TestLibraryOne.csproj" />
   </ItemGroup>
 
 </Project>

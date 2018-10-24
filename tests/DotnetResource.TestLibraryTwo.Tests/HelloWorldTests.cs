@@ -1,8 +1,8 @@
 using System;
 using Xunit;
-using DotnetResource.TestLibrary;
+using DotnetResource.TestLibraryTwo;
 
-namespace DotnetResource.TestLibrary.Tests
+namespace DotnetResource.TestLibraryTwo.Tests
 {
     public class UnitTest1
     {

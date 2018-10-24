@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DotnetResource.TestLibrary
+namespace DotnetResource.TestLibraryOne
 {
     public class HelloWorld
     {

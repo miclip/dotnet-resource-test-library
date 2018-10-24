@@ -1,9 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>DotnetResource.TestLibrary</RootNamespace>
+    <RootNamespace>DotnetResource.TestLibraryTwo</RootNamespace>
     <IsPackable>true</IsPackable>
-    <PackageId>DotnetResource.TestLibrary</PackageId>
+    <PackageId>DotnetResource.TestLibraryTwo</PackageId>
     <Version>1.0.0</Version>
     <Authors>Michael Lipscombe</Authors>
     <Company>Miclip LLC</Company>
